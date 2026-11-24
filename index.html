@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>传送门导航最新地址发布页 - 官方视频导航 | 每日更新</title>
+<meta name="description" content="传送门导航最新地址发布页官方网站，提供高清视频导航、创作者社区与品牌动态。企业级视频导航平台，值得信赖的原创内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M20 32h24M32 20v24' stroke='%2334d399' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='6' fill='none' stroke='%23fbbf24' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f1420;
+  --bg-soft:#161d2d;
+  --card:#1a2233;
+  --line:#2a3448;
+  --text:#e7ecf5;
+  --muted:#9aa7bf;
+  --accent:#34d399;
+  --accent-2:#fbbf24;
+  --accent-3:#60a5fa;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --sticky:112px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky)}
+body{
+  margin:0;
+  font-family:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1c3a34 0%,transparent 60%),var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+p{margin:0 0 14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 12px;font-weight:700}
+h1{font-size:clamp(28px,4vw,44px);letter-spacing:.5px}
+h2{font-size:clamp(22px,2.6vw,30px)}
+h3{font-size:clamp(17px,1.6vw,20px)}
+.tpn-container{width:min(1160px,100% - 40px);margin-inline:auto}
+.tpn-eyebrow{color:var(--accent);font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.tpn-section{padding:56px 0}
+.tpn-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.tpn-section-head p{color:var(--muted);max-width:620px;margin:0}
+.tpn-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:999px;border:1px solid var(--line);background:var(--bg-soft);color:var(--text);font-weight:600;font-size:14px;cursor:pointer;transition:.2s;white-space:nowrap}
+.tpn-btn:hover{border-color:var(--accent);transform:translateY(-2px)}
+.tpn-btn-primary{background:linear-gradient(135deg,var(--accent),#22a06b);color:#06231a;border:none}
+.tpn-btn-primary:hover{filter:brightness(1.08)}
+.tpn-btn-ghost{background:transparent}
+.tpn-tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;background:rgba(52,211,153,.12);color:var(--accent);border:1px solid rgba(52,211,153,.28);font-weight:600}
+.tpn-tag-warm{background:rgba(251,191,36,.12);color:var(--accent-2);border-color:rgba(251,191,36,.3)}
+.tpn-tag-blue{background:rgba(96,165,250,.12);color:var(--accent-3);border-color:rgba(96,165,250,.3)}
+
+/* 吸顶公告 + 页头 */
+.tpn-sticky{position:sticky;top:0;z-index:90}
+.tpn-notice{background:linear-gradient(90deg,#0b3a2c,#123d55);border-bottom:1px solid var(--line);font-size:13px;padding:9px 0}
+.tpn-notice .tpn-container{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.tpn-notice .tpn-notice-dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 10px var(--accent-2);flex:none}
+.tpn-notice strong{color:var(--accent-2)}
+.tpn-notice span{color:#cfe3dc}
+.tpn-notice a{color:var(--accent);text-decoration:underline;font-weight:700}
+.tpn-header{background:rgba(15,20,32,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.tpn-header-inner{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:12px 0}
+.tpn-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.5px}
+.tpn-logo-mark{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 200deg,var(--accent),var(--accent-3),var(--accent-2),var(--accent));display:grid;place-items:center;color:#06231a;font-weight:900;flex:none}
+.tpn-nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.tpn-nav a{padding:8px 12px;border-radius:10px;font-size:14px;color:var(--muted);font-weight:600;transition:.18s}
+.tpn-nav a:hover{color:var(--text);background:var(--bg-soft)}
+.tpn-head-actions{display:flex;align-items:center;gap:10px}
+.tpn-search{position:relative;display:flex;align-items:center}
+.tpn-search input{width:200px;max-width:44vw;padding:9px 14px 9px 34px;border-radius:999px;border:1px solid var(--line);background:var(--bg-soft);color:var(--text);font-size:13px;outline:none;transition:.2s}
+.tpn-search input:focus{border-color:var(--accent);width:240px}
+.tpn-search svg{position:absolute;left:11px;width:16px;height:16px;color:var(--muted);pointer-events:none}
+.tpn-search-tip{position:absolute;top:calc(100% + 8px);right:0;width:280px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:13px;color:var(--muted);display:none;box-shadow:var(--shadow);z-index:100}
+.tpn-search-tip.show{display:block}
+.tpn-menu-btn{display:none;background:var(--bg-soft);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px;font-size:14px;cursor:pointer}
+
+/* 首屏 全幅主视觉 + 浮动文字 */
+.tpn-hero{position:relative;min-height:74vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.tpn-hero-visual{position:absolute;inset:0;z-index:0}
+.tpn-hero-visual img{width:100%;height:100%;object-fit:cover;opacity:.42}
+.tpn-hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,20,32,.94) 20%,rgba(15,20,32,.55) 62%,rgba(15,20,32,.82) 100%)}
+.tpn-hero-inner{position:relative;z-index:1;padding:64px 0;width:100%}
+.tpn-hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center}
+.tpn-hero h1{max-width:14em}
+.tpn-hero h1 .tpn-h1-accent{color:var(--accent)}
+.tpn-hero-lead{font-size:clamp(15px,1.5vw,18px);color:#c9d5e6;max-width:560px}
+.tpn-hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}
+.tpn-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.tpn-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:560px}
+.tpn-stat{background:rgba(26,34,51,.72);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.tpn-stat strong{display:block;font-size:clamp(20px,2.4vw,28px);color:var(--accent);font-weight:800;line-height:1.2}
+.tpn-stat span{font-size:12px;color:var(--muted)}
+.tpn-hero-side{background:rgba(22,29,45,.82);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.tpn-hero-side h3{font-size:16px;margin-bottom:14px}
+.tpn-hero-side ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.tpn-hero-side li{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#c4d0e2}
+.tpn-hero-side li b{color:var(--accent-2);font-size:12px;border:1px solid rgba(251,191,36,.35);border-radius:6px;padding:0 6px;flex:none;margin-top:2px}
+.tpn-hero-side .tpn-side-note{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:12px;color:var(--muted)}
+
+/* 通用卡片 */
+.tpn-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.22s;min-width:0}
+.tpn-card:hover{transform:translateY(-4px);border-color:#3b4b66;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.tpn-card-body{padding:16px}
+.tpn-card-body h3{font-size:16px}
+.tpn-card-body p{color:var(--muted);font-size:13.5px;margin-bottom:10px}
+.tpn-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);align-items:center}
+.tpn-cover{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0b1220}
+.tpn-cover img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.tpn-card:hover .tpn-cover img{transform:scale(1.05)}
+.tpn-play{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.tpn-play span{width:46px;height:46px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;color:#fff;font-size:15px;backdrop-filter:blur(3px)}
+
+/* 焦点内容 + 文字列表 */
+.tpn-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;align-items:start}
+.tpn-focus-main .tpn-cover{aspect-ratio:16/9;border-radius:var(--radius);border:1px solid var(--line)}
+.tpn-focus-main img{width:100%;height:100%;object-fit:cover}
+.tpn-focus-main .tpn-card-body{padding:18px 4px 0}
+.tpn-list{display:flex;flex-direction:column;gap:12px}
+.tpn-list-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:13px 16px;transition:.18s}
+.tpn-list-item:hover{border-color:#3b4b66;background:#1b2436}
+.tpn-list-item h4{font-size:14.5px;margin:0 0 4px}
+.tpn-list-item p{font-size:12.5px;color:var(--muted);margin:0}
+.tpn-list-item .tpn-list-op{display:flex;gap:8px;flex-wrap:wrap}
+.tpn-mini-btn{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;padding:5px 10px;font-size:12px;cursor:pointer;transition:.18s;font-weight:600}
+.tpn-mini-btn:hover{color:var(--text);border-color:var(--accent)}
+.tpn-mini-btn.active{color:var(--accent);border-color:var(--accent);background:rgba(52,211,153,.08)}
+
+/* 视频列表 */
+.tpn-video-list{display:flex;flex-direction:column;gap:14px}
+.tpn-video-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:15px 18px}
+.tpn-video-item .tpn-v-top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px}
+.tpn-video-item h4{margin:0;font-size:15px}
+.tpn-video-item p{margin:2px 0 6px;font-size:13px;color:var(--muted)}
+.tpn-video-ops{display:flex;gap:8px;flex-wrap:wrap}
+
+/* 专题 */
+.tpn-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.tpn-topic{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
+.tpn-topic h3{font-size:17px}
+.tpn-topic .tpn-topic-state{font-size:12px;color:var(--accent-2);font-weight:700}
+.tpn-topic ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:13px;color:#c4d0e2}
+.tpn-topic li::before{content:"›";color:var(--accent);font-weight:800;margin-right:6px}
+
+/* 作者矩阵 双列简介 */
+.tpn-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tpn-author{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.tpn-avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:22px;color:#04231b;flex:none}
+.tpn-author h3{font-size:16px;margin-bottom:2px}
+.tpn-author .tpn-a-field{font-size:12px;color:var(--accent);font-weight:700;margin-bottom:6px}
+.tpn-author p{font-size:13px;color:var(--muted);margin:0 0 8px}
+.tpn-a-stats{display:flex;gap:14px;font-size:12px;color:#b9c6da}
+.tpn-a-stats b{color:var(--text)}
+
+/* 评论 双列短评 */
+.tpn-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tpn-comment{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.tpn-comment .tpn-c-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.tpn-comment .tpn-c-head strong{font-size:14px}
+.tpn-comment .tpn-c-head span{font-size:12px;color:var(--muted)}
+.tpn-comment p{font-size:13.5px;color:#c6d2e4;margin:0 0 8px}
+.tpn-stars{color:var(--accent-2);font-size:13px;letter-spacing:2px}
+
+/* 数据榜单 + FAQ + 合作 */
+.tpn-rank{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.tpn-rank-col{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.tpn-rank-col h3{font-size:16px;display:flex;justify-content:space-between;align-items:center}
+.tpn-rank-col h3 span{font-size:12px;color:var(--accent)}
+.tpn-rank-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.tpn-rank-list li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;font-size:13px}
+.tpn-rank-list li b{color:var(--accent-2);font-weight:800}
+.tpn-rank-list li em{font-style:normal;color:var(--muted);font-size:12px}
+.tpn-faq{display:flex;flex-direction:column;gap:10px}
+.tpn-faq details{background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:0 16px;transition:.2s}
+.tpn-faq details[open]{border-color:#3b4b66}
+.tpn-faq summary{cursor:pointer;padding:14px 0;font-weight:600;font-size:14.5px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.tpn-faq summary::-webkit-details-marker{display:none}
+.tpn-faq summary::after{content:"+";color:var(--accent);font-weight:800;font-size:18px}
+.tpn-faq details[open] summary::after{content:"–"}
+.tpn-faq details p{padding:0 0 14px;margin:0;color:var(--muted);font-size:13.5px}
+.tpn-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.tpn-partner{background:var(--bg-soft);border:1px dashed var(--line);border-radius:12px;padding:18px 12px;text-align:center;font-weight:700;font-size:14px;color:#b9c6da}
+.tpn-partner small{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:4px}
+
+/* 关键词解析 */
+.tpn-essay{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,3vw,36px)}
+.tpn-essay h2{margin-bottom:6px}
+.tpn-essay .tpn-essay-sub{color:var(--muted);margin-bottom:22px}
+.tpn-essay h3{color:var(--accent);margin-top:24px}
+.tpn-essay p{color:#c6d2e4;font-size:14.5px}
+.tpn-essay .tpn-quote{border-left:3px solid var(--accent-2);padding:8px 0 8px 16px;color:#dbe6f5;font-weight:600;background:rgba(251,191,36,.05);border-radius:0 8px 8px 0;margin:16px 0}
+
+/* 辅助区 grid */
+.tpn-aux-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tpn-aux-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.tpn-aux-card h3{font-size:16px}
+.tpn-timeline-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.tpn-timeline-list li{border-left:2px solid var(--accent);padding-left:14px;font-size:13px;color:var(--muted)}
+.tpn-timeline-list strong{color:var(--text);display:block;font-size:13.5px}
+
+/* 页脚 */
+.tpn-footer{border-top:1px solid var(--line);background:#0a0f18;padding:44px 0 24px;margin-top:20px}
+.tpn-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.tpn-footer h4{font-size:14px;margin-bottom:12px;color:#dbe6f5}
+.tpn-footer p{font-size:13px;color:var(--muted)}
+.tpn-footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}
+.tpn-footer ul a:hover{color:var(--accent)}
+.tpn-footer-bottom{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#7d8aa3}
+
+/* Toast & 回到顶部 */
+.tpn-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:#0b3a2c;color:#d8fff0;border:1px solid var(--accent);border-radius:999px;padding:10px 20px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:200}
+.tpn-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.tpn-to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--bg-soft);color:var(--text);font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:150}
+.tpn-to-top.show{opacity:1;pointer-events:auto}
+.tpn-to-top:hover{border-color:var(--accent)}
+
+/* 移动端 */
+@media (max-width:900px){
+  .tpn-hero-grid{grid-template-columns:1fr}
+  .tpn-focus-grid{grid-template-columns:1fr}
+  .tpn-topics{grid-template-columns:1fr}
+  .tpn-authors{grid-template-columns:1fr}
+  .tpn-comments{grid-template-columns:1fr}
+  .tpn-rank{grid-template-columns:1fr}
+  .tpn-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tpn-aux-grid{grid-template-columns:1fr}
+  .tpn-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .tpn-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg-soft);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:10px 20px 16px;gap:4px}
+  .tpn-nav.open{display:flex}
+  .tpn-header-inner{position:relative;flex-wrap:wrap}
+  .tpn-menu-btn{display:inline-block}
+  .tpn-head-actions{order:3}
+  .tpn-hero-stats{grid-template-columns:1fr}
+  .tpn-video-item{grid-template-columns:1fr}
+  .tpn-video-ops{justify-content:flex-start}
+  .tpn-footer-grid{grid-template-columns:1fr}
+  .tpn-search input{width:150px}
+  .tpn-search input:focus{width:180px}
+}
+@media (max-width:480px){
+  .tpn-container{width:calc(100% - 28px)}
+  .tpn-section{padding:40px 0}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 吸顶 -->
+<div class="tpn-sticky" id="tpnTop">
+  <div class="tpn-notice" role="status" aria-label="最新公告">
+    <div class="tpn-container">
+      <span class="tpn-notice-dot" aria-hidden="true"></span>
+      <strong>最新发布</strong>
+      <span>传送门导航 2026-11-22 更新：新增「高清视频导航专区」与「创作者接力计划」第 4 期，本周已上线 36 条精品内容。</span>
+      <a href="#tpn-updates">查看企业动态</a>
+    </div>
+  </div>
+  <header class="tpn-header">
+    <div class="tpn-container tpn-header-inner">
+      <a class="tpn-logo" href="#tpnTop" aria-label="传送门导航官网首页">
+        <span class="tpn-logo-mark">传</span>
+        <span>传送门导航<span style="color:var(--accent);font-size:12px;display:block;letter-spacing:2px;font-weight:600">OFFICIAL</span></span>
+      </a>
+      <nav class="tpn-nav" id="tpnNav" aria-label="主导航">
+        <a href="#tpn-hero">首页</a>
+        <a href="#tpn-focus">焦点内容</a>
+        <a href="#tpn-videos">最新视频</a>
+        <a href="#tpn-topics">专题企划</a>
+        <a href="#tpn-creators">创作者</a>
+        <a href="#tpn-essay">品牌解析</a>
+        <a href="#tpn-reviews">口碑</a>
+        <a href="#tpn-faq">FAQ</a>
+      </nav>
+      <div class="tpn-head-actions">
+        <div class="tpn-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" id="tpnSearchInput" placeholder="搜索视频 / 专题 / 创作者" aria-label="站内搜索">
+          <div class="tpn-search-tip" id="tpnSearchTip"></div>
+        </div>
+        <button class="tpn-menu-btn" id="tpnMenuBtn" aria-expanded="false" aria-controls="tpnNav">菜单</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- S2 品牌首屏：全幅主视觉 + 浮动文字 -->
+<section class="tpn-hero" id="tpn-hero">
+  <div class="tpn-hero-visual">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b3a2c'/%3E%3Cstop offset='.5' stop-color='%23133a55'/%3E%3Cstop offset='1' stop-color='%23151b2c'/%3E%3C/linearGradient%3E%3CradialGradient id='g2' cx='.72' cy='.28' r='.45'%3E%3Cstop offset='0' stop-color='%2334d399' stop-opacity='.55'/%3E%3Cstop offset='1' stop-color='%2334d399' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23g1)'/%3E%3Ccircle cx='1150' cy='250' r='320' fill='url(%23g2)'/%3E%3Cg stroke='%23fbbf24' stroke-opacity='.35' fill='none' stroke-width='2'%3E%3Ccircle cx='1180' cy='260' r='190'/%3E%3Ccircle cx='1180' cy='260' r='130'/%3E%3Ccircle cx='1180' cy='260' r='70'/%3E%3C/g%3E%3Cg fill='%23e7ecf5' fill-opacity='.5'%3E%3Crect x='150' y='520' width='420' height='10' rx='5'/%3E%3Crect x='150' y='548' width='300' height='8' rx='4'/%3E%3Crect x='150' y='572' width='360' height='8' rx='4'/%3E%3Crect x='150' y='620' width='140' height='34' rx='10' fill='%2334d399' fill-opacity='.8'/%3E%3Crect x='310' y='620' width='140' height='34' rx='10' fill='%23fbbf24' fill-opacity='.55'/%3E%3C/g%3E%3Cg stroke='%23e7ecf5' stroke-opacity='.18' stroke-width='1'%3E%3Cpath d='M0 700 Q 400 620 800 700 T 1600 660' fill='none'/%3E%3Cpath d='M0 760 Q 500 690 900 760 T 1600 720' fill='none'/%3E%3C/g%3E%3C/svg%3E" alt="传送门导航官方平台深色数据可视化主视觉" width="1600" height="900" fetchpriority="high">
+  </div>
+  <div class="tpn-hero-inner">
+    <div class="tpn-container tpn-hero-grid">
+      <div>
+        <div class="tpn-eyebrow">官方网站 · 企业级视频导航平台</div>
+        <h1>传送门导航最新地址发布页<span class="tpn-h1-accent"> · </span>每日更新</h1>
+        <p class="tpn-hero-lead">作为深耕视频导航领域的品牌，传送门导航官网为创作者与企业搭建高清、原创、正版的内容生态。我们持续运营、坚持用户至上，让每一次点击都通向值得信赖的精品内容。</p>
+        <div class="tpn-hero-meta">
+          <span class="tpn-tag">官方发布</span>
+          <span class="tpn-tag tpn-tag-warm">高清正版</span>
+          <span class="tpn-tag tpn-tag-blue">每日更新</span>
+          <span class="tpn-tag">创作者社区</span>
+        </div>
+        <p style="color:#c9d5e6;max-width:620px;font-size:14.5px">传送门导航企业自 2019 年持续运营至今，以「让好内容被看见」为使命，聚合影视解析、科技测评、城市影像、知识科普等垂直领域内容。我们相信，真实与温暖的影像力量，能陪伴每一位用户成长。</p>
+        <div class="tpn-hero-actions">
+          <a class="tpn-btn tpn-btn-primary" href="#tpn-videos">浏览最新视频</a>
+          <a class="tpn-btn" href="#tpn-creators">认识创作者</a>
+          <button class="tpn-btn tpn-btn-ghost" id="tpnHeroShare" type="button">分享官网</button>
+        </div>
+        <div class="tpn-hero-stats">
+          <div class="tpn-stat"><strong>12,800+</strong><span>精品内容累计上线</span></div>
+          <div class="tpn-stat"><strong>36</strong><span>本周新增导航条目</span></div>
+          <div class="tpn-stat"><strong>4.9 / 5</strong><span>用户口碑综合评分</span></div>
+        </div>
+      </div>
+      <aside class="tpn-hero-side" aria-label="官网今日更新摘要">
+        <h3>今日发布 · 11月22日</h3>
+        <ul>
+          <li><b>01</b><span>「高清视频导航专区」上线，支持多维度筛选。</span></li>
+          <li><b>02</b><span>创作者接力计划第 4 期开放报名，限 50 位。</span></li>
+          <li><b>03</b><span>城市影像专题新增成都站 6 条在地内容。</span></li>
+          <li><b>04</b><span>品牌故事短片《门》第二集正式发布。</span></li>
+        </ul>
+        <div class="tpn-side-note">官方发布 · 持续运营 · 内容每日巡检更新</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- S3 焦点内容：重点大图 + 文字列表 -->
+<section class="tpn-section" id="tpn-focus">
+  <div class="tpn-container">
+    <div class="tpn-section-head">
+      <div>
+        <div class="tpn-eyebrow">焦点推荐</div>
+        <h2>传送门导航 · 本周焦点内容精选</h2>
+        <p>由编辑团队与社区共同推选的原创精品，覆盖教程干货、深度测评与城市探索，呈现传送门导航品牌的内容品质。</p>
+      </div>
+      <button class="tpn-btn" id="tpnFocusMore" type="button">查看更多推荐</button>
+    </div>
+    <div class="tpn-focus-grid">
+      <article class="tpn-focus-main">
+        <div class="tpn-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d2f46'/%3E%3Cstop offset='1' stop-color='%23131a2b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='540' fill='url(%23f1)'/%3E%3Cg fill='none' stroke='%2334d399' stroke-opacity='.55'%3E%3Crect x='70' y='80' width='360' height='210' rx='12' stroke-width='2'/%3E%3Crect x='110' y='120' width='280' height='16' rx='8' fill='%2334d399' fill-opacity='.3'/%3E%3Crect x='110' y='152' width='200' height='12' rx='6' fill='%23e7ecf5' fill-opacity='.25'/%3E%3Crect x='110' y='178' width='240' height='12' rx='6' fill='%23e7ecf5' fill-opacity='.18'/%3E%3Crect x='110' y='218' width='120' height='32' rx='8' fill='%23fbbf24' fill-opacity='.6'/%3E%3C/g%3E%3Cg fill='none' stroke='%23fbbf24' stroke-opacity='.5' stroke-width='2'%3E%3Ccircle cx='700' cy='280' r='120'/%3E%3Ccircle cx='700' cy='280' r='80'/%3E%3Cpath d='M700 160v240M580 280h240' stroke-opacity='.3'/%3E%3C/g%3E%3Cg fill='%2334d399'%3E%3Ccircle cx='700' cy='280' r='10'/%3E%3C/g%3E%3Cpath d='M650 300l50-40 40 30 60-60' stroke='%2334d399' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="传送门导航高清视频导航专区界面示意图" width="960" height="540">
+          <div class="tpn-play"><span>▶</span></div>
+        </div>
+        <div class="tpn-card-body">
+          <div class="tpn-meta" style="margin-bottom:8px">
+            <span class="tpn-tag">深度测评</span>
+            <span>编辑推荐</span>
+            <span>2026-11-22</span>
+          </div>
+          <h3>高清视频导航专区实测：一次把「找片难」讲清楚</h3>
+          <p>传送门导航产品团队用 12 分钟完整演示新版导航逻辑：如何用标签筛选、热度排序与收藏同步，在 3 次点击内定位想看的内容。片中同时给出适合新用户的上手路径与常见误区。</p>
+          <div class="tpn-meta">
+            <span>作者：门内观察</span>
+            <span>播放 48,210</span>
+            <span>点赞 3,406</span>
+            <span>收藏 1,289</span>
+          </div>
+          <div class="tpn-video-ops" style="margin-top:12px">
+            <button class="tpn-mini-btn tpn-like-btn" type="button" data-count="3406"><span>👍 点赞</span> <b>3,406</b></button>
+            <button class="tpn-mini-btn tpn-fav-btn" type="button" data-count="1289"><span>☆ 收藏</span> <b>1,289</b></button>
+            <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="高清视频导航专区实测">分享</button>
+          </div>
+        </div>
+      </article>
+      <div class="tpn-list" id="tpnFocusList">
+        <article class="tpn-list-item">
+          <div>
+            <h4>城市探索｜凌晨四点的成都，影像里的烟火气</h4>
+            <p>在地文化 · 播放 21,600 · 12 分钟</p>
+          </div>
+          <div class="tpn-list-op">
+            <span class="tpn-tag tpn-tag-warm">城市</span>
+            <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="凌晨四点的成都">分享</button>
+          </div>
+        </article>
+        <article class="tpn-list-item">
+          <div>
+            <h4>教程干货｜三招判断一条视频是否值得收藏</h4>
+            <p>实用技巧 · 播放 18,930 · 8 分钟</p>
+          </div>
+          <div class="tpn-list-op">
+            <span class="tpn-tag">教程</span>
+            <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="三招判断视频">分享</button>
+          </div>
+        </article>
+        <article class="tpn-list-item">
+          <div>
+            <h4>人物访谈｜和导航编辑聊「 curation 的手感」</h4>
+            <p>人物访谈 · 播放 15,020 · 16 分钟</p>
+          </div>
+          <div class="tpn-list-op">
+            <span class="tpn-tag tpn-tag-blue">访谈</span>
+            <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="导航编辑访谈">分享</button>
+          </div>
+        </article>
+        <article class="tpn-list-item">
+          <div>
+            <h4>品牌故事｜一扇门为什么开了七年</h4>
+            <p>品牌故事 · 播放 12,780 · 10 分钟</p>
+          </div>
+          <div class="tpn-list-op">
+            <span class="tpn-tag">品牌</span>
+            <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="一扇门为什么开了七年">分享</button>
+          </div>
+        </article>
+        <article class="tpn-list-item">
+          <div>
+            <h4>知识科普｜推荐算法到底在推荐什么</h4>
+            <p>行业观察 · 播放 9,640 · 14 分钟</p>
+          </div>
+          <div class="tpn-list-op">
+            <span class="tpn-tag tpn-tag-blue">知识</span>
+            <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="推荐算法科普">分享</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 主内容入口：最新视频流（单列图文列表） -->
+<section class="tpn-section" id="tpn-videos" style="background:rgba(22,29,45,.4)">
+  <div class="tpn-container">
+    <div class="tpn-section-head">
+      <div>
+        <div class="tpn-eyebrow">最新视频</div>
+        <h2>传送门导航 · 持续更新的精品内容流</h2>
+        <p>每一条视频都来自官方审核与创作者原创投稿，高清、正版、可收藏。支持点赞、收藏、评论与分享，构建真实、温暖的社区氛围。</p>
+      </div>
+      <button class="tpn-btn" id="tpnFilterToggle" type="button" data-on="false">只看高清</button>
+    </div>
+    <div class="tpn-video-list" id="tpnVideoList">
+      <article class="tpn-video-item" data-hd="1">
+        <div>
+          <div class="tpn-v-top"><span class="tpn-tag">科技前沿</span><span class="tpn-tag tpn-tag-warm" data-hd-tag>高清</span><span style="font-size:12px;color:var(--muted)">11-22</span></div>
+          <h4>新设备上手 72 小时：一个导航编辑的真实使用记录</h4>
+          <p>不堆参数，只聊手感。从通勤、拍摄到夜间阅读，记录设备在真实生活里的表现，给出适合内容创作者的购买建议。</p>
+          <div class="tpn-meta"><span>作者：老陈评测</span><span>播放 26,300</span><span>点赞 1,980</span><span>收藏 860</span></div>
+        </div>
+        <div class="tpn-video-ops">
+          <button class="tpn-mini-btn tpn-like-btn" type="button" data-count="1980"><span>👍</span> <b>1,980</b></button>
+          <button class="tpn-mini-btn tpn-fav-btn" type="button" data-count="860"><span>☆</span> <b>860</b></button>
+          <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="新设备上手72小时">分享</button>
+        </div>
+      </article>
+      <article class="tpn-video-item" data-hd="1">
+        <div>
+          <div class="tpn-v-top"><span class="tpn-tag tpn-tag-blue">城市探索</span><span class="tpn-tag tpn-tag-warm" data-hd-tag>高清</span><span style="font-size:12px;color:var(--muted)">11-22</span></div>
+          <h4>沿着锦江走一段：成都影像散步第 6 集</h4>
+          <p>没有旁白的城市影像，只有清晨的水声、摊贩的烟火和慢下来的脚步。适合在周末午后安静看完。</p>
+          <div class="tpn-meta"><span>作者：蜀地影像志</span><span>播放 19,870</span><span>点赞 1,420</span><span>收藏 730</span></div>
+        </div>
+        <div class="tpn-video-ops">
+          <button class="tpn-mini-btn tpn-like-btn" type="button" data-count="1420"><span>👍</span> <b>1,420</b></button>
+          <button class="tpn-mini-btn tpn-fav-btn" type="button" data-count="730"><span>☆</span> <b>730</b></button>
+          <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="沿着锦江走一段">分享</button>
+        </div>
+      </article>
+      <article class="tpn-video-item" data-hd="0">
+        <div>
+          <div class="tpn-v-top"><span class="tpn-tag">教程干货</span><span style="font-size:12px;color:var(--muted)">11-21</span></div>
+          <h4>剪辑思路拆解：一条 60 秒短片如何做到留人 40 秒</h4>
+          <p>从开场 3 秒、节奏点、字幕密度到结尾引导，逐帧复盘一条数据不错的内容，附可直接套用的脚本模板。</p>
+          <div class="tpn-meta"><span>作者：剪辑小南</span><span>播放 17,540</span><span>点赞 1,260</span><span>收藏 940</span></div>
+        </div>
+        <div class="tpn-video-ops">
+          <button class="tpn-mini-btn tpn-like-btn" type="button" data-count="1260"><span>👍</span> <b>1,260</b></button>
+          <button class="tpn-mini-btn tpn-fav-btn" type="button" data-count="940"><span>☆</span> <b>940</b></button>
+          <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="60秒短片留人技巧">分享</button>
+        </div>
+      </article>
+      <article class="tpn-video-item" data-hd="1">
+        <div>
+          <div class="tpn-v-top"><span class="tpn-tag tpn-tag-warm">人物访谈</span><span class="tpn-tag tpn-tag-warm">高清</span><span style="font-size:12px;color:var(--muted)">11-21</span></div>
+          <h4>与一位导航编辑对谈：每天看 200 条视频之后</h4>
+          <p>从审美疲劳到重新找到兴奋点，聊内容筛选的坚持、取舍与自我怀疑，也聊这个行业里那些看不见的耐心。</p>
+          <div class="tpn-meta"><span>作者：门内观察</span><span>播放 13,620</span><span>点赞 1,010</span><span>收藏 520</span></div>
+        </div>
+        <div class="tpn-video-ops">
+          <button class="tpn-mini-btn tpn-like-btn" type="button" data-count="1010"><span>👍</span> <b>1,010</b></button>
+          <button class="tpn-mini-btn tpn-fav-btn" type="button" data-count="520"><span>☆</span> <b>520</b></button>
+          <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="与导航编辑对谈">分享</button>
+        </div>
+      </article>
+      <article class="tpn-video-item" data-hd="0">
+        <div>
+          <div class="tpn-v-top"><span class="tpn-tag">知识科普</span><span style="font-size:12px;color:var(--muted)">11-20</span></div>
+          <h4>为什么你会反复点开同一条视频：一次关于习惯的观察</h4>
+          <p>用通俗的方式解释推荐与记忆的关系，并给出三个主动打破信息茧房的小练习，适合关心内容生态的你。</p>
+          <div class="tpn-meta"><span>作者：轻知识计划</span><span>播放 11,980</span><span>点赞 880</span><span>收藏 610</span></div>
+        </div>
+        <div class="tpn-video-ops">
+          <button class="tpn-mini-btn tpn-like-btn" type="button" data-count="880"><span>👍</span> <b>880</b></button>
+          <button class="tpn-mini-btn tpn-fav-btn" type="button" data-count="610"><span>☆</span> <b>610</b></button>
+          <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="为什么总点开同一条视频">分享</button>
+        </div>
+      </article>
+      <article class="tpn-video-item" data-hd="1">
+        <div>
+          <div class="tpn-v-top"><span class="tpn-tag tpn-tag-blue">创作幕后</span><span class="tpn-tag tpn-tag-warm">高清</span><span style="font-size:12px;color:var(--muted)">11-20</span></div>
+          <h4>一条品牌短片的诞生：从 37 版脚本到 1 个镜头</h4>
+          <p>完整记录传送门导航品牌短片《门》第二集的制作过程，包括勘景、分镜、调色与客户端反馈的真实取舍。</p>
+          <div class="tpn-meta"><span>作者：传送门制作组</span><span>播放 10,540</span><span>点赞 920</span><span>收藏 480</span></div>
+        </div>
+        <div class="tpn-video-ops">
+          <button class="tpn-mini-btn tpn-like-btn" type="button" data-count="920"><span>👍</span> <b>920</b></button>
+          <button class="tpn-mini-btn tpn-fav-btn" type="button" data-count="480"><span>☆</span> <b>480</b></button>
+          <button class="tpn-mini-btn tpn-share-btn" type="button" data-title="品牌短片诞生记">分享</button>
+        </div>
+      </article>
+    </div>
+    <p id="tpnFilterEmpty" style="display:none;color:var(--muted);text-align:center;padding:24px 0">当前筛选下暂无内容，试试关闭筛选。</p>
+  </div>
+</section>
+
+<!-- S4 专题 / 企划 -->
+<section class="tpn-section" id="tpn-topics">
+  <div class="tpn-container">
+    <div class="tpn-section-head">
+      <div>
+        <div class="tpn-eyebrow">专题企划</div>
+        <h2>传送门导航 · 正在进行的品牌企划</h2>
+        <p>专题是传送门导航内容生态的重要组成。我们围绕关键词策划系列内容，让优质创作者有舞台，让用户有可追的连续叙事。</p>
+      </div>
+    </div>
+    <div class="tpn-topics">
+      <article class="tpn-topic">
+        <span class="tpn-topic-state">更新中 · 第 4 期</span>
+        <h3>创作者接力计划</h3>
+        <p style="font-size:13px;color:var(--muted);margin:0">以「一周一主题」接力创作，鼓励新创作者上传原创短片，官方提供流量扶持与专业点评。</p>
+        <ul>
+          <li>第 3 期主题「我的一天」优秀作品展映</li>
+          <li>第 4 期报名开放，限 50 个名额</li>
+          <li>获奖创作者将获得官网首页推荐位</li>
+        </ul>
+      </article>
+      <article class="tpn-topic">
+        <span class="tpn-topic-state">连载中 · 已更新 6 集</span>
+        <h3>城市影像志</h3>
+        <p style="font-size:13px;color:var(--muted);margin:0">用影像记录在地文化，从成都出发，走向更多城市。每集由当地创作者联合拍摄。</p>
+        <ul>
+          <li>成都站：锦江清晨与玉林夜色</li>
+          <li>杭州站：西湖边的手艺人</li>
+          <li>投稿通道长期开放，欢迎上传</li>
+        </ul>
+      </article>
+      <article class="tpn-topic">
+        <span class="tpn-topic-state">长期企划</span>
+        <h3>品牌故事《门》</h3>
+        <p style="font-size:13px;color:var(--muted);margin:0">传送门导航官方品牌短片系列，讲述一扇门背后的七年坚持，以及我们对内容品质的理解。</p>
+        <ul>
+          <li>第一集：从一张手写清单开始</li>
+          <li>第二集：37 版脚本与一个镜头</li>
+          <li>第三集：正在制作，敬请期待</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S5 创作者 / 作者矩阵（双列简介） -->
+<section class="tpn-section" id="tpn-creators" style="background:rgba(22,29,45,.4)">
+  <div class="tpn-container">
+    <div class="tpn-section-head">
+      <div>
+        <div class="tpn-eyebrow">创作者社区</div>
+        <h2>传送门导航 · 值得认识的创作者</h2>
+        <p>他们是传送门导航内容生态的中坚力量，覆盖评测、城市、知识、剪辑等垂直领域。点击头像可查看作者信息。</p>
+      </div>
+      <button class="tpn-btn" id="tpnJoinBtn" type="button">申请成为创作者</button>
+    </div>
+    <div class="tpn-authors">
+      <article class="tpn-author">
+        <div class="tpn-avatar" style="background:linear-gradient(135deg,#34d399,#0ea5e9)">门</div>
+        <div>
+          <h3>门内观察</h3>
+          <div class="tpn-a-field">擅长：行业观察 / 深度测评</div>
+          <p>传送门导航官方编辑账号，长期观察内容生态与推荐机制。做内容之前先做人，相信克制的表达更有力量。擅长把复杂的事情讲简单，也愿意为一帧画面反复较真。</p>
+          <div class="tpn-a-stats"><span>作品 <b>126</b></span><span>粉丝 <b>8.6万</b></span></div>
+          <button class="tpn-mini-btn tpn-author-btn" type="button" data-name="门内观察" style="margin-top:8px">查看档案</button>
+        </div>
+      </article>
+      <article class="tpn-author">
+        <div class="tpn-avatar" style="background:linear-gradient(135deg,#fbbf24,#f97316);color:#2a1602">蜀</div>
+        <div>
+          <h3>蜀地影像志</h3>
+          <div class="tpn-a-field">擅长：城市探索 / 在地文化</div>
+          <p>成都本地创作者，拍城市也拍人。喜欢清晨的光和菜市场的声响，坚持用长镜头记录真实生活。希望更多人通过影像认识一座城市的日常，而不只是打卡点。</p>
+          <div class="tpn-a-stats"><span>作品 <b>74</b></span><span>粉丝 <b>4.2万</b></span></div>
+          <button class="tpn-mini-btn tpn-author-btn" type="button" data-name="蜀地影像志" style="margin-top:8px">查看档案</button>
+        </div>
+      </article>
+      <article class="tpn-author">
+        <div class="tpn-avatar" style="background:linear-gradient(135deg,#60a5fa,#6366f1)">南</div>
+        <div>
+          <h3>剪辑小南</h3>
+          <div class="tpn-a-field">擅长：教程干货 / 剪辑思路</div>
+          <p>自由剪辑师，为多个品牌做过短片。习惯把每个项目拆成可复用的模板，也乐于公开自己的失败案例。相信好的剪辑不是炫技，而是让观众感觉不到时间流逝。</p>
+          <div class="tpn-a-stats"><span>作品 <b>98</b></span><span>粉丝 <b>6.1万</b></span></div>
+          <button class="tpn-mini-btn tpn-author-btn" type="button" data-name="剪辑小南" style="margin-top:8px">查看档案</button>
+        </div>
+      </article>
+      <article class="tpn-author">
+        <div class="tpn-avatar" style="background:linear-gradient(135deg,#a78bfa,#ec4899)">轻</div>
+        <div>
+          <h3>轻知识计划</h3>
+          <div class="tpn-a-field">擅长：知识科普 / 行业观察</div>
+          <p>一个专注知识科普的三人小组，擅长用可视化讲清抽象概念。我们相信好的科普应该让人有「原来如此」的瞬间，而不是堆砌术语。每周更新，坚持原创。</p>
+          <div class="tpn-a-stats"><span>作品 <b>53</b></span><span>粉丝 <b>3.8万</b></span></div>
+          <button class="tpn-mini-btn tpn-author-btn" type="button" data-name="轻知识计划" style="margin-top:8px">查看档案</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 关键词深度解析 S 品牌故事 / 理念 -->
+<section class="tpn-section" id="tpn-essay">
+  <div class="tpn-container">
+    <div class="tpn-essay">
+      <div class="tpn-eyebrow">品牌解析</div>
+      <h2>传送门导航最新地址发布页：一个导航品牌的七年深耕</h2>
+      <p class="tpn-essay-sub">从最初的收藏夹整理，到今天的视频内容生态，传送门导航始终在回答一个问题：如何让好内容被更快、更准、更安心地找到。</p>
+
+      <h3>一、从「一个链接」到「一套秩序」</h3>
+      <p>传送门导航最初只是一个手工整理的链接清单，后来逐渐发展为面向视频内容的导航平台。很多用户第一次接触「传送门导航最新地址发布页」这个词，是为了找到最新可用的入口，而真正留下来，是因为这里的内容被认真对待。我们为每条内容建立标签体系，从视频类型、时长、画质到创作者领域做多维度标注，让搜索与筛选都有据可依。这种看似笨拙的方式，恰恰是传送门导航作为企业级平台的基础。我们不追求收录数量的无限膨胀，而是坚持「少而准」的策展逻辑：每一条被推荐的内容，都经过编辑团队的人工复核，确保画质、版权与信息准确。七年来，这套秩序不断迭代，但核心从未改变——用户至上。</p>
+
+      <h3>二、高清与正版，是底线而非卖点</h3>
+      <p>在视频导航领域，「高清」与「正版」经常被当作营销词汇，但在传送门导航官网，它们是最基础的准入条件。我们对上传内容设有清晰的技术规范：分辨率、码率、音频轨道、字幕文件都有明确要求，并提供官方的上传校验工具，创作者可在提交前自查。同时，平台与创作者签署正式的授权协议，明确内容使用范围，保障原创者的权益。这一切并不轻松，甚至会增加运营成本，但我们认为，唯有把底线守住，内容生态才谈得上健康。也正因如此，越来越多创作者愿意把「官方发布」留在传送门导航，因为这里的规则清晰、可预期，值得信赖。</p>
+      <div class="tpn-quote">「让每一次点击都通向值得信赖的内容」——传送门导航品牌使命。</div>
+
+      <h3>三、社区不是流量池，而是长期陪伴</h3>
+      <p>我们把社区理解为一种长期关系。传送门导航的评论区不追求热度排序，而是保留时间线与引用回复，让讨论可以沉淀。创作者可以通过「创作灵感」板块获得脚本建议与标题方向，也可以在「企业动态」里看到平台规则与内容策略的变化，减少信息不对称。我们每年都会举办面向新创作者的接力计划，设置报名、投票与展映环节，让多元的表达被看见。这些设计的出发点都很朴素：陪伴创作者成长，也陪伴用户养成更健康的内容消费习惯。真实、温暖、有力量，是我们对社区氛围的期待，也是我们持续运营的方向。</p>
+
+      <h3>四、关键词之外，品牌做对了什么</h3>
+      <p>如果把「传送门导航最新地址发布页」拆开看，它既是一个搜索需求，也是一种信任表达。用户寻找的不仅是地址，更是一个稳定的、不会突然消失的内容入口。为此，我们坚持透明发布更新日志，保持官方渠道的信息同步，并在站内提供清晰的帮助文档与常见问题。我们不制造焦虑，也不靠夸张标题吸引点击，而是用稳定的更新节奏、可核验的内容质量与开放的社区规则，慢慢积累口碑。行业领先从来不是自封的称号，而是用户用一次次收藏与分享投出来的结果。未来，传送门导航将继续深耕视频导航这一垂直领域，把内容筛选做得更细，把创作者服务做得更实，把社区氛围做得更暖，让「官方网站」这四个字真正有分量。</p>
+    </div>
+  </div>
+</section>
+
+<!-- S6 用户评价 + 数据榜单 -->
+<section class="tpn-section" id="tpn-reviews" style="background:rgba(22,29,45,.4)">
+  <div class="tpn-container">
+    <div class="tpn-section-head">
+      <div>
+        <div class="tpn-eyebrow">用户口碑</div>
+        <h2>传送门导航 · 用户评价与热度榜单</h2>
+        <p>真实的社区反馈与可查的热度数据，是我们持续改进的依据。每条评价来自已完成观看或收藏的用户。</p>
+      </div>
+    </div>
+
+    <div class="tpn-rank" style="margin-bottom:34px">
+      <div class="tpn-rank-col">
+        <h3>热度榜 <span>实时</span></h3>
+        <ol class="tpn-rank-list">
+          <li><b>1</b><span>高清视频导航专区实测</span><em>26.3万</em></li>
+          <li><b>2</b><span>凌晨四点的成都</span><em>21.6万</em></li>
+          <li><b>3</b><span>三招判断视频是否值得收藏</span><em>18.9万</em></li>
+          <li><b>4</b><span>与导航编辑对谈</span><em>13.6万</em></li>
+          <li><b>5</b><span>品牌短片《门》第二集</span><em>10.5万</em></li>
+        </ol>
+      </div>
+      <div class="tpn-rank-col">
+        <h3>新人榜 <span>本周</span></h3>
+        <ol class="tpn-rank-list">
+          <li><b>1</b><span>小城手作日记</span><em>新人</em></li>
+          <li><b>2</b><span>夜跑路线研究所</span><em>新人</em></li>
+          <li><b>3</b><span>一碗面的时间</span><em>新人</em></li>
+          <li><b>4</b><span>胶片里的旧书店</span><em>新人</em></li>
+          <li><b>5</b><span>阳台种菜实录</span><em>新人</em></li>
+        </ol>
+      </div>
+      <div class="tpn-rank-col">
+        <h3>口碑榜 <span>综合</span></h3>
+        <ol class="tpn-rank-list">
+          <li><b>1</b><span>剪辑思路拆解</span><em>4.9分</em></li>
+          <li><b>2</b><span>城市影像志·成都站</span><em>4.9分</em></li>
+          <li><b>3</b><span>轻知识计划·习惯观察</span><em>4.8分</em></li>
+          <li><b>4</b><span>品牌故事《门》</span><em>4.8分</em></li>
+          <li><b>5</b><span>新设备上手 72 小时</span><em>4.7分</em></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="tpn-comments">
+      <article class="tpn-comment">
+        <div class="tpn-c-head"><strong>林间有风</strong><span>11-22</span></div>
+        <div class="tpn-stars">★★★★★</div>
+        <p>第一次用传送门导航是找教程，结果被城市影像志留住了。没有夸张封面，点进去就安安静静看完了，很久没有这种体验。</p>
+      </article>
+      <article class="tpn-comment">
+        <div class="tpn-c-head"><strong>老周不熬夜</strong><span>11-21</span></div>
+        <div class="tpn-stars">★★★★☆</div>
+        <p>更新很稳定，官方发布节奏清楚。希望搜索能再加一个按时长筛选，有时候只想看十分钟以内的内容。</p>
+      </article>
+      <article class="tpn-comment">
+        <div class="tpn-c-head"><strong>Momo 在南方</strong><span>11-21</span></div>
+        <div class="tpn-stars">★★★★★</div>
+        <p>作为创作者说一句，这里的上传校验工具是真的好用，省了反复沟通画质的时间。规则透明，做内容更有安全感。</p>
+      </article>
+      <article class="tpn-comment">
+        <div class="tpn-c-head"><strong>半夜看片的人</strong><span>11-20</span></div>
+        <div class="tpn-stars">★★★★☆</div>
+        <p>收藏同步做得不错，换设备也不会丢。就是希望收藏夹能支持自定义分类，现在内容多了有点乱。</p>
+      </article>
+      <article class="tpn-comment">
+        <div class="tpn-c-head"><strong>阿茶</strong><span>11-20</span></div>
+        <div class="tpn-stars">★★★★★</div>
+        <p>评论区没有戾气，这点很难得。能看到不同观点好好说话，愿意在这里多停留一会儿。</p>
+      </article>
+      <article class="tpn-comment">
+        <div class="tpn-c-head"><strong>南屿</strong><span>11-19</span></div>
+        <div class="tpn-stars">★★★★☆</div>
+        <p>整体品质在线，广告也不多。希望专题企划更新再快一点，城市影像志每一集都在等。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S7 辅助区：企业动态 + FAQ + 合作品牌 -->
+<section class="tpn-section" id="tpn-updates">
+  <div class="tpn-container">
+    <div class="tpn-section-head">
+      <div>
+        <div class="tpn-eyebrow">企业动态与帮助</div>
+        <h2>传送门导航 · 官方动态与常见问题</h2>
+        <p>透明的更新日志与清晰的帮助文档，是官方网站应有的责任。合作品牌与创作者一起，共建值得信赖的内容平台。</p>
+      </div>
+    </div>
+    <div class="tpn-aux-grid">
+      <div class="tpn-aux-card">
+        <h3>企业动态 · 官方发布</h3>
+        <ul class="tpn-timeline-list">
+          <li><strong>2026-11-22</strong>高清视频导航专区上线，新增多维度筛选与收藏同步。</li>
+          <li><strong>2026-11-18</strong>创作者接力计划第 4 期开放报名，限 50 位原创作者。</li>
+          <li><strong>2026-11-12</strong>城市影像志·杭州站上线，收录 8 条在地文化内容。</li>
+          <li><strong>2026-11-05</strong>品牌短片《门》第二集正式发布，官网首页同步推荐。</li>
+          <li><strong>2026-10-28</strong>平台内容审核规范更新，进一步明确正版授权要求。</li>
+        </ul>
+      </div>
+      <div class="tpn-aux-card">
+        <h3>合作品牌与伙伴</h3>
+        <div class="tpn-partners" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="tpn-partner">影像工坊<small>内容共创</small></div>
+          <div class="tpn-partner">城市记录局<small>专题合作</small></div>
+          <div class="tpn-partner">轻知识实验室<small>知识专栏</small></div>
+          <div class="tpn-partner">门内制作<small>品牌短片</small></div>
+        </div>
+        <p style="margin-top:14px;font-size:12.5px;color:var(--muted)">我们与垂直领域的专业团队保持长期合作，共同维护内容品质与版权规范。</p>
+      </div>
+    </div>
+
+    <div style="margin-top:26px" id="tpn-faq">
+      <h3 style="margin-bottom:16px">常见问题 · 帮助中心</h3>
+      <div class="tpn-faq">
+        <details open>
+          <summary>传送门导航最新地址发布页多久更新一次？</summary>
+          <p>官方发布节奏为每周至少一次，遇平台功能上线或专题活动会加急更新。所有更新会同步记录在站内「企业动态」，方便你核对。</p>
+        </details>
+        <details>
+          <summary>如何判断站内视频是否为高清、正版？</summary>
+          <p>高清内容在列表与详情页均有「高清」标识；正版内容均标注授权来源。平台设有上传校验工具，创作者提交前可自检分辨率、码率与授权文件。</p>
+        </details>
+        <details>
+          <summary>我可以向传送门导航投稿吗？</summary>
+          <p>可以。首页与创作者板块均提供投稿入口，填写作品信息与授权声明后提交。编辑团队通常在 3 个工作日内反馈初审结果，通过后进入内容排期。</p>
+        </details>
+        <details>
+          <summary>收藏与点赞数据会丢失吗？</summary>
+          <p>收藏与点赞会与账号绑定并同步，正常使用不会丢失。如遇异常，可通过帮助中心提交问题，我们会在工作时间内核查处理。</p>
+        </details>
+        <details>
+          <summary>评论区的管理规则是什么？</summary>
+          <p>我们鼓励就内容本身展开讨论，禁止人身攻击、广告引流与侵权内容。评论采用时间线展示，支持引用回复，违规内容会被折叠或删除。</p>
+        </details>
+        <details>
+          <summary>品牌合作与内容共创如何联系？</summary>
+          <p>可点击页面中的「合作联络」按钮，填写合作类型与需求描述。我们更倾向与尊重原创、注重品质的团队长期合作。</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S8 页脚 -->
+<footer class="tpn-footer">
+  <div class="tpn-container">
+    <div class="tpn-footer-grid">
+      <div>
+        <div class="tpn-logo" style="margin-bottom:12px"><span class="tpn-logo-mark">传</span><span>传送门导航</span></div>
+        <p>传送门导航官方网站，深耕视频导航与内容策展。我们坚持高清、正版、原创，持续运营，用真实的内容与社区陪伴每一位用户成长。</p>
+        <p style="font-size:12px;color:#7d8aa3">官方发布 · 企业级视频导航平台 · 用户至上</p>
+      </div>
+      <div>
+        <h4>浏览</h4>
+        <ul>
+          <li><a href="#tpn-focus">焦点内容</a></li>
+          <li><a href="#tpn-videos">最新视频</a></li>
+          <li><a href="#tpn-topics">专题企划</a></li>
+          <li><a href="#tpn-creators">创作者社区</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>支持</h4>
+        <ul>
+          <li><a href="#tpn-faq">帮助与 FAQ</a></li>
+          <li><a href="#tpn-updates">企业动态</a></li>
+          <li><a href="#tpn-essay">品牌故事</a></li>
+          <li><a href="#tpn-reviews">用户口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联络</h4>
+        <ul>
+          <li>合作：brand@example.com</li>
+          <li>投稿：creator@example.com</li>
+          <li>工作日 9:00–18:00</li>
+          <li><button class="tpn-mini-btn" id="tpnFooterShare" type="button" style="margin-top:4px">复制官网链接</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tpn-footer-bottom">
+      <span>© 2019–2026 传送门导航 版权所有 | 持续运营中</span>
+      <span>备案号：蜀ICP备2019001234号-1 | 广播电视节目制作经营许可证（示例）</span>
+    </div>
+  </div>
+</footer>
+
+<button class="tpn-to-top" id="tpnToTop" type="button" aria-label="回到顶部">↑</button>
+<div class="tpn-toast" id="tpnToast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+  var toast = document.getElementById('tpnToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2200);
+  }
+
+  // 移动端导航折叠
+  var menuBtn = document.getElementById('tpnMenuBtn');
+  var nav = document.getElementById('tpnNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && nav.classList.contains('open')){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 搜索提示与筛选反馈
+  var searchInput = document.getElementById('tpnSearchInput');
+  var searchTip = document.getElementById('tpnSearchTip');
+  var searchIndex = [
+    '高清视频导航专区实测','凌晨四点的成都','三招判断视频是否值得收藏',
+    '与导航编辑对谈','品牌短片《门》第二集','新设备上手 72 小时',
+    '城市影像志·成都站','剪辑思路拆解','创作者接力计划','轻知识计划'
+  ];
+  if(searchInput && searchTip){
+    searchInput.addEventListener('input', function(){
+      var q = searchInput.value.trim().toLowerCase();
+      if(!q){
+        searchTip.classList.remove('show');
+        return;
+      }
+      var hits = searchIndex.filter(function(item){
+        return item.toLowerCase().indexOf(q) !== -1;
+      }).slice(0,5);
+      if(hits.length){
+        searchTip.innerHTML = '<strong style="color:var(--accent)">相关结果</strong><br>' + hits.map(function(h){
+          return '· ' + h;
+        }).join('<br>');
+      } else {
+        searchTip.innerHTML = '没有找到匹配内容，试试「城市」「评测」「教程」等关键词。';
+      }
+      searchTip.classList.add('show');
+    });
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){
+        var q = searchInput.value.trim();
+        if(q){
+          showToast('已为你检索：' + q);
+        }
+      }
+    });
+    document.addEventListener('click', function(e){
+      if(!searchTip.contains(e.target) && e.target !== searchInput){
+        searchTip.classList.remove('show');
+      }
+    });
+  }
+
+  // 点赞 +1 / 取消
+  function bindLike(btn){
+    btn.addEventListener('click', function(){
+      var b = btn.querySelector('b');
+      if(!b) return;
+      var base = parseInt(btn.getAttribute('data-count') || b.textContent.replace(/,/g,''), 10) || 0;
+      var active = btn.classList.toggle('active');
+      var next = active ? base + 1 : base;
+      b.textContent = next.toLocaleString('en-US');
+      showToast(active ? '已点赞，感谢支持' : '已取消点赞');
+    });
+  }
+  // 收藏切换
+  function bindFav(btn){
+    btn.addEventListener('click', function(){
+      var b = btn.querySelector('b');
+      var active = btn.classList.toggle('active');
+      var icon = btn.querySelector('span');
+      if(icon) icon.textContent = active ? '♥ 已收藏' : '☆ 收藏';
+      if(b){
+        var base = parseInt(btn.getAttribute('data-count') || b.textContent.replace(/,/g,''), 10) || 0;
+        b.textContent = (active ? base + 1 : base).toLocaleString('en-US');
+      }
+      showToast(active ? '已加入收藏夹' : '已取消收藏');
+    });
+  }
+  // 分享
+  function bindShare(btn){
+    btn.addEventListener('click', function(){
+      var title = btn.getAttribute('data-title') || '传送门导航';
+      var text = '我正在传送门导航官网观看《' + title + '》，推荐给你。';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){
+          showToast('分享文案已复制，可粘贴给好友');
+        }).catch(function(){
+          showToast('分享：' + text);
+        });
+      } else {
+        showToast('分享：' + text);
+      }
+    });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.tpn-like-btn'), bindLike);
+  Array.prototype.forEach.call(document.querySelectorAll('.tpn-fav-btn'), bindFav);
+  Array.prototype.forEach.call(document.querySelectorAll('.tpn-share-btn'), bindShare);
+
+  // 作者信息弹窗（用 toast 承载摘要，保持轻量）
+  Array.prototype.forEach.call(document.querySelectorAll('.tpn-author-btn'), function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-name') || '创作者';
+      showToast(name + ' · 官方认证创作者，作品与简介见本页创作者板块');
+    });
+  });
+
+  // 高清筛选
+  var filterBtn = document.getElementById('tpnFilterToggle');
+  var filterEmpty = document.getElementById('tpnFilterEmpty');
+  if(filterBtn){
+    filterBtn.addEventListener('click', function(){
+      var on = filterBtn.getAttribute('data-on') !== 'true';
+      filterBtn.setAttribute('data-on', on ? 'true' : 'false');
+      filterBtn.textContent = on ? '显示全部' : '只看高清';
+      var items = document.querySelectorAll('#tpnVideoList .tpn-video-item');
+      var visible = 0;
+      Array.prototype.forEach.call(items, function(item){
+        var isHd = item.getAttribute('data-hd') === '1';
+        var show = !on || isHd;
+        item.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+      if(filterEmpty) filterEmpty.style.display = visible ? 'none' : 'block';
+      showToast(on ? '已筛选高清内容' : '已显示全部内容');
+    });
+  }
+
+  // 焦点更多 & 投稿 & 分享官网
+  var focusMore = document.getElementById('tpnFocusMore');
+  if(focusMore){
+    focusMore.addEventListener('click', function(){
+      var target = document.getElementById('tpn-videos');
+      if(target) target.scrollIntoView({behavior:'smooth'});
+      showToast('已为你跳转到最新视频流');
+    });
+  }
+  var joinBtn = document.getElementById('tpnJoinBtn');
+  if(joinBtn){
+    joinBtn.addEventListener('click', function(){
+      showToast('创作者申请入口已开放，请发送作品至 creator@example.com');
+    });
+  }
+  function copyLink(){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText('传送门导航最新地址发布页 · 官方网站').then(function(){
+        showToast('官网链接信息已复制');
+      }).catch(function(){
+        showToast('官网链接：传送门导航最新地址发布页');
+      });
+    } else {
+      showToast('官网链接：传送门导航最新地址发布页');
+    }
+  }
+  var heroShare = document.getElementById('tpnHeroShare');
+  if(heroShare) heroShare.addEventListener('click', copyLink);
+  var footerShare = document.getElementById('tpnFooterShare');
+  if(footerShare) footerShare.addEventListener('click', copyLink);
+
+  // 回到顶部
+  var toTop = document.getElementById('tpnToTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  if(toTop){
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  // 卡片悬停动效由 CSS 承担；此处补充键盘可访问提示
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      if(nav) nav.classList.remove('open');
+      if(menuBtn) menuBtn.setAttribute('aria-expanded','false');
+      if(searchTip) searchTip.classList.remove('show');
+    }
+  });
+})();
+</script>
+</body>
+  </html>
